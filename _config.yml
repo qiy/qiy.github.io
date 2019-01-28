@@ -9,16 +9,16 @@
 title: QIY
 brief-intro: 柒月的博客 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gvew.github.io" # the base hostname & protocol for your site
+url: "https://iqiy.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
 twitter_username:
 facebook_username: 
-github_username: gvew
+github_username: iqiy
 email: ph_one@outlook.com
-weibo_username: gvew
+weibo_username: iqiy
 zhihu_username: 
 linkedIn_username: 
 dribbble_username:

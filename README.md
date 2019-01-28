@@ -1,2 +1,2 @@
-# iqiy.github.io
-七月的博客
+# About this Cool Concise Jekyll Blog Theme 🤘🤘🤘
+

@@ -21,7 +21,7 @@ author: 柒月
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/a427ef572bc1553299adf6c35559f6dd.png)
 
 从-3σ 到3σ间概率已占99.7%；
-## 1.3 高斯分布（正态分布）##
+## 1.3 高斯分布（正态分布） ##
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/18a1c7991334b77ba15c50f877f39b0e.png)
 
 (大写西格玛） \|∑\|:协方差行列式；

@@ -10,8 +10,9 @@ author: 柒月
 {:toc}
 
 基本原则：测试集对比训练集；
-# 1 临近法 #
+线性分类器-损失函数-互熵损失-非线性分类器
 *WELCOME TO READ ME*
+# 1 临近法 #
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/8633c91db3e17d58fc19a1b082c39137.png)
 
 如下 逐位减法
@@ -46,7 +47,7 @@ author: 柒月
 
 \-
 
-#2 损失函数#
+# 2 损失函数 #
 
 ## 2.1 支持向量机损失 ##
 

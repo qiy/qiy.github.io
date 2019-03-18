@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "导数到梯度"
+title:  "01导数到梯度"
 categories: MATH
 tags:  derivative gradient
 author: 柒月

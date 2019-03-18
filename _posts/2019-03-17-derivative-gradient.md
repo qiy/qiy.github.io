@@ -8,15 +8,12 @@ author: 柒月
 
 * content
 {:toc}
-## 1 导数到梯度 ##
+
+#1 导数到梯度#
+## 1.1 对于1元1阶导数 ##
+f’(x)
 
 *WELCOME TO READ ME*
-
-**1.1**
-
-对于1元1阶导数
-
-f’(x)
 
 对于2元1阶导数
 
@@ -27,7 +24,7 @@ f(x1,x2,x3,,,,xn)；
 
 梯度的表示符号用记为grad f（X）或▽f（X）=
 
-![](https://i.imgur.com/QOCK0Ee.png)
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/c71e026d79b955ecd2a14b78c4591afd.png)
 
 所谓“梯度的方向就是函数增大最快的方向”，梯度的本身就是输入参数向量在函数方向上的偏导向量。
 
@@ -42,27 +39,35 @@ f(x1,x2,x3,,,,xn)；
 如二元函数中：
 
 z=x2+y2图像：
-![](https://i.imgur.com/yqwgK14.png)
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/22d069edf826390aa883d784f56593fd.png)
 
 可知梯度：gradient =[ 2\*x, 2\*y]
 
 在点（2，2）的梯度向量可为[4,4]：
-![](https://i.imgur.com/Jczad12.png)
-**1.2**
 
-对于多元2阶（hession矩阵）:
-![](https://i.imgur.com/JrMtlJF.png)
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/758a924a6b37eb74fed632ced0ffc52b.png)
+
+## 1.2 对于多元2阶（hession矩阵） ##
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/e7c4335c636fe2f331babe2b9c6a1692.png)
+
 hession矩阵为对称矩阵，
 
-## 2 泰勒级数与极值（由标量到矢量） ##
+# 2 泰勒级数与极值（由标量到矢量） #
+
 标量：
-![](https://i.imgur.com/8F3ynrb.png)
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/5a5e556a034000616af1054400bdce6c.png)
+
 矢量：
-![](https://i.imgur.com/KKS4bWc.png)
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/ff2cea0dc75d0cfa47e1f11de88a8a1c.png)
+
 机器学习中所说的步长即：δ。
 
 范数性质：1正定性/2齐次性/3三角不等性/4相容性。
 
-||a|| ：表示a的标量大小。
+\|\|a\|\| ：表示a的标量大小。
 
 计算也不喜欢解方程，也喜欢迭代。

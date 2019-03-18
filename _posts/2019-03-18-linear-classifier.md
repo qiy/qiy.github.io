@@ -10,11 +10,8 @@ author: 柒月
 {:toc}
 
 基本原则：测试集对比训练集；
-
-## 1 临近法 ##
-
+# 1 临近法 #
 *WELCOME TO READ ME*
-
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/8633c91db3e17d58fc19a1b082c39137.png)
 
 如下 逐位减法
@@ -35,7 +32,7 @@ author: 柒月
 
 \-
 
-每一行为某一类的权重，最后那类权重高则判别为哪一类。
+**每一行为某一类的权重，最后那类权重高则判别为哪一类。**
 
 \-
 
@@ -49,9 +46,9 @@ author: 柒月
 
 \-
 
-## 2 损失函数 ##
+#2 损失函数#
 
-2.1 支持向量机损失
+## 2.1 支持向量机损失 ##
 
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/90674bc95ab2c6323d7bb65ae4aaa65b.png)
 
@@ -67,7 +64,7 @@ max（0，11-13+10）= 8，值比较大，则说明与真实差距小。
 
 \-
 
-2.2 互熵损失
+## 2.2 互熵损失 ##
 
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/fc44685550f8e47a0435d6268bdfab0f.png)
 
@@ -97,5 +94,3 @@ y=wx
 • **常见的非线性分类器：决策树、RF、GBDT、多层感知机**。
 
 优缺点：非线性分类器编程复杂，但是效果拟合能力强。
-
-\-

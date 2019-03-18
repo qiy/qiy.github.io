@@ -10,11 +10,9 @@ author: 柒月
 {:toc}
 
 ## 1 特征值与特征向量 ##
-
 Ax=λX
 
 *WELCOME TO READ ME*
-
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/2353828a268c863e0b85ac6fe2c81ba1.png)
 
 几何意义：

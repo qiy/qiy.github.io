@@ -8,53 +8,23 @@ author: 柒月
 
 * content
 {:toc}
+基础：
+μ：期望(谬/穆,均值)；σ2:总体方差（西格玛）；
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/a401300c4d205accadf0d728e2e2e2e8.png)；
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/aee06fae9acb52d337db9883a4d39c64.png)为总体方差，![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/882637017673794eb5e6fdaf1bb71a03.png)为变量，![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/d12272b410ab9271fee480a318b0dc87.png)为总体均值，![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/ca7b21878acf82ae1057c8a4242d7b2b.png)为总体例数；
 
 *WELCOME TO READ ME*
 
-基础：
-
-μ：期望(谬/穆,均值)；
-
-σ2:总体方差（西格玛）
-
-![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/a401300c4d205accadf0d728e2e2e2e8.png)
-
-；
-
-![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/aee06fae9acb52d337db9883a4d39c64.png)
-
-为总体方差，
-
-![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/882637017673794eb5e6fdaf1bb71a03.png)
-
-为变量，
-
-![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/d12272b410ab9271fee480a318b0dc87.png)
-
-为总体均值，
-
-![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/ca7b21878acf82ae1057c8a4242d7b2b.png)
-
-为总体例数；
-
 # 1 随机变量 #
-
 ## 1.1 累计分布函数 ##
-
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/ef5af44637e041b8f4d80f61c723713e.png)
-
-\-
-
 ## 1.2 概率密度函数 ##
-
 当a与b非常接近时，相减已很不直观了，故引入积分思想，产生概率密度函数：
-
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/a427ef572bc1553299adf6c35559f6dd.png)
 
 从-3σ 到3σ间概率已占99.7%；
-
 ## 1.3 高斯分布（正态分布）##
-
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/18a1c7991334b77ba15c50f877f39b0e.png)
 
 (大写西格玛） \|∑\|:协方差行列式；
@@ -93,5 +63,3 @@ CuA = Ac：A的补集。
 P(S\|L) = 99%
 
 求：P(L\|S)
-
-\-

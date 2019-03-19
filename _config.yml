@@ -16,15 +16,14 @@ permalink: /:year/:month/:day/:title/
 # other links
 twitter_username:
 facebook_username: 
-github_username: iqiy
+github_username:
 email:
 weibo_username:
-blog_username: Ph-one
 zhihu_username: 
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 谈笑有鸿儒 往来无白丁 
+description_footer:
 
 # comments
 # two ways to comment, only choose one, and use your own short name

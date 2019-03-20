@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "03线性代数基础"
-categories: ALSA
+categories: MATH
 tags:  linear-algebra PCA 
 author: 柒月 
 ---

@@ -62,7 +62,7 @@ author: 柒月
 max（0，11-13+10）= 8，值比较大，则说明与真实差距小。l =“不对减对，所有非正确类求和”
 
 ![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/5755990dc81f9e18d91de135d80b15bc.png)
-
+hinge loss function:中文称呼合页损失函数;
 \-
 
 ## 2.2 互熵损失 ##

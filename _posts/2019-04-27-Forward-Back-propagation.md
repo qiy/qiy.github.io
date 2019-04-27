@@ -209,15 +209,6 @@ b 都从c转向e。
 \*bp过程可能差不多就是这样了，可能此文需要你以前接触过bp算法，只是还有疑惑，一步步推导后，会有较深的理解。
 
 \*上面的python代码实现如下：
-
-\*
-
-\*参考文档：
-
-\*1.<http://blog.csdn.net/lhanchao/article/details/51419150>
-
-\*2.<https://www.zhihu.com/question/39022858>
-
     \#!/usr/bin/env python
     \#coding:utf-8
     import numpy as np
@@ -244,6 +235,12 @@ b 都从c转向e。
     W1 += l2_delta \* l1.T
     W0 += l0.T.dot(l1_delta)
     print W0, '\\n', W1
-    
+\*
+
+\*参考文档：
+
+\*1.<http://blog.csdn.net/lhanchao/article/details/51419150>
+
+\*2.<https://www.zhihu.com/question/39022858>
 
 该文非原创；

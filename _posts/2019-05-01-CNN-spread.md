@@ -9,7 +9,6 @@ author: 柒月
 * content
 {:toc}
 1 图像识别思路
-![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/1ea4a075c263c44ab1d2a9d3b9af485c.png)
 *WELCOME TO READ ME*
 # 1 图像识别思路 #
 

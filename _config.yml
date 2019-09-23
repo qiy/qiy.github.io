@@ -60,4 +60,4 @@ excerpt_separator: "*WELCOME TO READ ME*"
 gems: [jekyll-paginate]
 paginate: 6
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate

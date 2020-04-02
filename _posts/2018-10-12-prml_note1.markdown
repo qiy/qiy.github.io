@@ -8,6 +8,7 @@ tags:
     - PRML
 ---
 
+*WELCOME TO READ ME*
 
 > PRML 和 ESL 的学习基本上是学十得一。稳扎稳打再来一次
 

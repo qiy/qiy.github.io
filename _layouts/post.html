@@ -90,6 +90,11 @@ layout: default
         </div>
     </div>
 </div>
+
+<!-- Add support for Mathjax by Voleking-->
+{% if page.mathjax %}
+  {% include mathjax_support.html %}
+{% endif %}
 <script>
 /**
  * target _blank
@@ -102,7 +107,4 @@ layout: default
 }());
 </script>
 <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
-<!-- Add support for Mathjax by Voleking-->
-{% if page.mathjax %}
-  {% include mathjax_support.html %}
-{% endif %}
+

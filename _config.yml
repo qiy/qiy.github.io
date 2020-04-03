@@ -1,63 +1,99 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: 柒月的博客 QIY.NET
-# brief-intro: 柒月的博客 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://iqiy.github.io" # the base hostname & protocol for your site
+title: Pelhans Blog
+SEOTitle: Pelhans 的博客
+header-img: img/home-bg.jpg
+email: me@pelhans.com
+description: "自然语言处理学徒 | Pelhans，Machine Learning , NLP , ASR | 这里是 @Pelhans 的博客"
+keyword: "Pelhans, 自然语言处理, 知识图谱, 表示学习"
+#url: "https://pelhans.me"              # your host, for absolute URL
+url: "https://pelhans.github.io"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-permalink: /:year/:month/:day/:title/
 
-# other links
-twitter_username:
-facebook_username: 
-github_username:
-email:
-weibo_username:
-zhihu_username: 
-linkedIn_username: 
-dribbble_username:
 
-description_footer:
+# SNS settings
+RSS: false
+weibo_username:     poiny
+zhihu_username:     zhang-han-pei
+github_username:    Pelhans
 
-# comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: 
-disqus_shortname: 
 
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
-baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
-google_analytics_id: UA-72449510-4 # google 分析追踪id
 
 # Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
-
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+  input: GFM                            # use Github Flavored Markdown !important
+  enable_coderay: true
 
-# port
-# port: 1234
+# Disqus settings
 
-# url
-category_dir: category/
-tag_dir: tag/
+# disqus_username: Lucy
 
-# excerpt
-# excerpt_separator: "\n\n\n\n"
-excerpt_separator: "*WELCOME TO READ ME*"
+gitalk:
+    enable: false
+    owner: pelhans
+    repo: pelhans.github.io
+    clientID: 15b9fe2f4c186c1a0331
+    clientSecret: 2cfe93101b4693abbccf523b126d8ffcc2985a7a
+    admin: pelhans
 
-# paginate
-gems: [jekyll-paginate]
-paginate: 6
+# Netease setttings
+netease_comment: false
+#git_issue : true
 
-theme: jekyll-theme-slate
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: '243ea57b3beeb8b347d29ba2e877eb56'
+
+# Google Analytics
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+#ga_domain: pelhans.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "强大而持久的意志力<br>"
+sidebar-avatar: /img/avatar-pelhans.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+#friends: [
+#    {
+#    #     title: "Su",
+#    #     href: "http://su.gallery/"
+#    # }
+#]

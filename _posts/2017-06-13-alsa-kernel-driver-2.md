@@ -4,7 +4,7 @@ title:  "音频kernel部分[架构二]"
 subtitle:   ALSA
 date:       2017-06-13
 author:     "QIY"
-header-img: "img/prml.jpg"
+header-img: "img/alsa.jpg"
 header-mask: 0.3 
 catalog:    true
 tags:

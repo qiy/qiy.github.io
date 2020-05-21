@@ -1,0 +1,289 @@
+---
+layout:     post
+title:      "PRML通俗串烧01"
+subtitle:   "第一章 绪论"
+date:       2018-10-12 00:15:18
+author:     "qiy"
+header-img: "img/prml.jpg"
+header-mask: 0.3 
+catalog:    true
+tags:
+    - PRML
+---
+
+
+> 从基础做起
+
+* TOC
+{:toc}
+
+# 绪论
+
+## 1.1 例子：多项式曲线拟合
+
+利用多项式函数拟合数据点，多项式函数形式如下：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/0a16b4971a8e678b9dd960b59f308998.png)
+
+如果这个多项式拟合散列的点，**求w 和m；**
+
+令：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/405aa4c33a5d4c223c861d46693fe3d2.png)
+
+则多项式函数可化为线性代数形式：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/5cded1ac969a6ca8e6b3b6d1498c4877.png)
+
+为了评价拟合函数的优劣，需要建立损失函数，测量每个样本点目标值与预测值之间的误差，拟合的目标是让误差最小。计算误差时使用均方根误差
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/e24ab7b6f20b8264bf3c3d202150cbc4.png)
+
+最小二乘法
+
+定义：**通过最小化误差的平方和寻找数据的最佳**[函数](https://baike.baidu.com/item/%E5%87%BD%E6%95%B0/301912)**匹配**。利用最小二乘法可以简便地求得未知的数据，并使得这些求得的数据与实际数据之间误差的平方和为最小。最小二乘法还可用于[曲线拟合](https://baike.baidu.com/item/%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/5893992)。
+
+为了取得误差函数的最小值，直接令函数的导数等于0，可以得到唯一解。此解称为解析解。
+
+不带正则项的解析解
+
+误差函数为：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/ab0c05509fa472a9169da2a2aad2b818.png)
+
+对其求导得：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/a38542127bd419dd6fe78b8d7c736e67.png)
+
+令导数等于0，得：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/ed9de55041fb116a32c07685be4c7a82.png)
+
+得：**随着阶数越高，误差越小，但是过拟合越来越严重；**
+
+**观察计算出来的W，会看到，阶数越高，多项式的系数越大的离谱；**
+
+**为了解决过拟合问题，可以增加样本数据，也可以加入正则项（惩罚项）**
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/43380b17a8116fccddf19b10802dac3d.png)
+
+参考：<https://www.jianshu.com/p/eac4c7928b56>
+
+## 1.2 概率论
+
+### 1.2.1 概率密度
+
+**简单的说就是概率的稠密度，用概率的微分表示**，如下
+
+对于随机变量X的分布函数F（x），如果存在非负可积函数f(x)，使得对任意实数x,有
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/32f4b7b5dde49d66d565fc437638e82e.png)
+
+则X为连续型随机变量，**称f(x)为X的概率密度函数**，简称为概率密度。
+
+（及F(x)可导）
+
+单纯的讲概率密度没有实际的意义，它必须有确定的有界区间为前提。可以把概率密度看成是纵坐标，区间看成是横坐标，**概率密度对区间的积分就是面积，而这个面积就是事件在这个区间发生的概率，**所有面积的和为1。所以单独分析一个点的概率密度是没有任何意义的，它必须要有区间作为参考和对比。
+
+### 1.2.2 期望和协方差
+
+期望（均值）：
+
+设连续性随机变量X的概率密度函数为f(x)，若积分绝对收敛，则称积分的值
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/5269dc9b4fa282f1b8dc977a5ed5fbe3.png)
+
+为随机变量的数学期望，**记为E(X)**。 
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/76f724a9f28bec0fce1dfea86cab6257.png)
+
+；
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/3c231a05297bafc47af89532b46168b1.png)
+
+正负相关性：<https://www.cnblogs.com/Ph-one/p/12610568.html>
+
+### 1.2.3 贝叶斯概率
+
+基础：
+
+P(A\|B)：事件B已发生的情况下，事件A发生的概率（条件概率）
+
+P(A,B)=P(AB)=P(A∩B)：事件A,B同时发生的概率。
+
+CuA = Ac：A的补集。
+
+先验概率乘以似然函数（likelihoodfunction）再归一化后，得到后验概率分布，后验概率分布即在已知给定的数据后，对不确定性的条件分布。
+
+**p(θ\|x)=p(x\|θ)p(θ)/p(x)**
+
+**p(x\|θ)：似然**
+
+**p(θ)：先验**
+
+**p(θ\|x)：后验**
+
+似然函数和概率密度有两个主要的区别：
+
+1.似然函数是参数的函数，不是随机变量的函数，而参数在一般情况下都是被认为常数的，不具有密度函数。
+
+2.似然函数的积分并不等于1， 而概率密度的积分为1.
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/e9707668e149010a72a76a682b9ff12c.png)
+
+### 1.2.4 高斯分布
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/54a9e41103ec934b171974546b45b971.png)
+
+基础：
+
+μ：期望(谬/穆,均值)；
+
+σ2:总体方差（西格玛）
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/a401300c4d205accadf0d728e2e2e2e8.png)
+
+；
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/aee06fae9acb52d337db9883a4d39c64.png)
+
+为总体方差，
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/882637017673794eb5e6fdaf1bb71a03.png)
+
+为变量，
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/d12272b410ab9271fee480a318b0dc87.png)
+
+为总体均值，
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/ca7b21878acf82ae1057c8a4242d7b2b.png)
+
+为总体例数；
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/18a1c7991334b77ba15c50f877f39b0e.png)
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/b8f2862a1c13febe58320fb1c4e0a43c.png)
+
+中心极限定理：**独立同分布的随机变量求和后，概率收敛于高斯分布**。如X=x1+x2+x3+x4，其中xi
+独立同分布，那么X收敛于高斯分布。两个高斯分布相加还是高斯分布。一个高斯分布+任意一个随机变量=近似于高斯分布；
+
+### 1.2.5 重新考察曲线拟合问题
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/d87af2daf1acb812a81be4f623098c35.png)
+
+### 1.2.6 贝叶斯曲线拟合
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/7065c4a71a7aa078ae49654dd2a36665.png)
+
+
+## 1.4 维度灾难
+
+可以证明，在高维空间中，一个**球体的大部分体积都聚集在表面附近的薄壳上**。高维空间产生的这种困难有时成为维度灾难。
+
+虽然维度灾难在模式识别应用中是一个重要的问题，但是它并不能阻止我们寻找应用于高维空间的有效技术。原因由两方面：
+
+第一，真实数据经常被限制在有着较低的有效维度的空间区域中，特别低，在目标值发生重要变化的方向上也有这种限制。
+
+第二，真实数据通常比较光滑(至少聚不上比较光滑)，因此大多数情况下，对数输入变量的微小该表，目标值的改变也很小，因此对于新的输入变量，我们可以通过局部的类似于插值的技术来进行预测。
+
+成功的模式识别技术利用上述两个性质中的一个或者都用。
+
+## 1.5 决策论
+
+根在一个实际的应用中，我们经常必须对t的值做具体的预测，或者更一般地，根据我们对于t的可能取值的理解，采取一个具体的动作。这一方面就是决策论的主题。在模式识别领域，通常当我们解决了推断问题后，那么决策阶段通常会变得非常简单，甚至不值一提。根据贝叶斯定理，我们有：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/52c6c97b7fd662ecf85f4f2a169d1e01.png)
+
+其中CkCk代表类别，如C1代表有癌症，C2代表没有癌症。如果我们的目标是最小化吧x分到错误类别中的可能性，那么根据直觉，我们要选择有最大后验概率的类别。下面将给出证明并进行推广。
+
+### 1.5.1 最小化错误分类率
+
+最小化错误分类率意味着尽可能少地做出错误分类。我们需要一个规则来把每个x的值分到一个合适的类别。这种规则将会把输入控件且分为不同的区域RkRk，这种区域被称为决策区域。因此分类错误的概率可以写为：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/a694d324341fc294ea50caf79c6271e1.png)
+
+我们应该最小化上式。应用概率的乘机规则，我们可以将R，C的联合概率转换为条件概率。因此如果我们把每个x分配到后验概率 p(Ck\|x)p(Ck\|x)最大的类别中，那么我们的分类错误的概率就会最小。
+
+### 1.5.2 最小化期望损失
+
+损失函数也被称为代价函数，是对所有可能的决策或者动作可能产生的损失的一种整体的度量。我们的目标是最小化损失函数。
+
+对于一个给定的输入向量x，我们**对于真实类别的不确定性通过联合概率分布**p(x,Ck)p(x,Ck)**来表示**。因此，我们转而去最小化平均损失。平均损失的定义就是用联合概率分布乘以损失函数并积分得到。
+
+利用概率的乘积规则，将联合概率转化为条件概率来消除共同因子p(x)。那么，最小化期望损失的决策规则是对于没个新的x，把它分到能使得下式取得最小值的第j类：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/2fe4c991dd23595fdc1ffaf98aabf487.png)
+
+一旦我们知道了类的后验概率，这件事就容易做了。
+
+### 1.5.3 拒绝选项
+
+略
+
+### 1.5.4 推断和决策
+
+分类问题可以被划分为两个阶段：推断和决策。在推断阶段，我们使用训练数据学习 p(Ck\|x)p(Ck\|x)的模型。在决策阶段，我们使用这些后验概率来进行最优的分类。
+
+事实上，我们可以区分出三种不同的方法来解决决策问题：
+
+1)
+生成式模型：直接对联合概率分布p(x,Ck)p(x,Ck)建模，得到后验概率。而后使用决策论来确定每个新的输入的x的类别。**显示地或隐式地对输入及输出进行建模的方法被称为生成式模型**。该方法要求解的东西最多，因为它涉及到寻找x和C的联合分布。对于许多应用，x的维度很高，这就导致我们需要大量的训练数据才能在合理的机型赌侠确定条件概率密度。但生成式模型的有点是能够通过公式求出数据的边缘概率密度。这对于检测模型中具有低概率的新数据点很有用。
+
+2)
+判别式模型：首先确定后验类密度 p(Ck\|x)p(Ck\|x)这一推断问题，接下来使用决策论对新的输入x进行分类。这种**直接对后验概率进行建模的方法成为判别式模型**。
+
+3)
+找到一个函数-判别函数。这个函数直接把每个输入x的标签映射为类别。这种情况下，概率不起作用，也就接触不到后验概率。，这将会导致我们无法最小化风险、使用拒绝选项、组合模型等。
+
+### 1.5.5 回归问题的损失函数
+
+在回归问题中，损失函数的一个常用的选择是平方损失，定义为L(t,y(x))=y(x)−t2L(t,y(x))=y(x)−t2。这种情况下，期望损失函数可以写成：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/2c04e2bacd782b4c3a39f3ca54e552a4.png)
+
+使用变分法求解y(x)，病结合概率相加规则和乘积规则，可得 y(x)=Et[t\|x]y(x)=Et[t\|x]。这是一个简单的回归问题在x条件下t的条件均值，被称为回归函数。另一方面，我们可以从另一个角度来看期望损失函数：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/a0f65d5df3ac49f3abbfdec73bbcbd45.png)
+
+可以看出y(x)只出现在第一项中，当y(x)等于条件期望均值时第一项取得最小值，这时第一项被消去，表明最优的最小平方预测由条件均值给出。**第二项是t的分布的方差，在x上进行了平均。它表示目标数据内在的变化性，可以被看成噪声。由于它与y(x)的分布无关，因此它表示损失函数的不可减小的最小值**。
+
+## 1.6 信息论
+
+我们想找到信息量表达的公式，那么什么是信息量呢，它可以被看成在学习x的值的时候的惊讶程度。因此该函数h(x)应该是概率p(x)的单调递增函数。同时对于两个不相关的事件x和y，那么这两个事件的信息量应该表现为加和的形式。因此很容易看出h(x)和p(x)一定是对数关系，同时还要保证信息一定是非负的，因此信息量的公式为：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/9299d84ca73c4db69215b8c1a7af85bd.png)
+
+·熵可以看做一个发送者想传输一个随机变量的值给接受者要传递的平均信息量：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/49a83297974e7698e96bcbb7ac3091e8.png)
+
+**熵是传输一个随机变量状态值所需的比特位的下界。一般来说，若随机变量的概率分布p(x)分布相对平衡地跨过许多值，那么熵就越大。在连续情况下，最大化微分熵的分布是高斯分布**。
+
+### 1.6.1 相对熵和互信息
+
+假设我们已经使用一个近似的分布q(x)对p(x)进行建模，因此在具体化x的值的时候，我们需要一些附加的信息。我们需要的平均附加信息量被称作相对熵或K-L散度：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/16e48529b8bd2d91a7b32bc52b8f0520.png)
+
+从公式可以看出它相当于近似分布q(x)的信息期望减去真是分布p(x)的期望的差。因此K-L散度可以看做两个分布p(x)和q(x)之间的不相似程度的度量。
+
+假设数据通过未知分布p(x)生成，我们想要对p(x)进行建模。我们可以尝试使用一些参数分布 q(x\|θ)q(x\|θ)来近似这个分布。一种确定θθ的方式是最小化p(x)和 q(x\|θ)q(x\|θ)之间关于θθ的K-L散度。我们不能直接这么做，因为我们不知道p(x)，但假如已经观察到了服从分布p(x)的有限数量的训练点xnxn，那么关于p(x)的期望就可以通过这些点的有限加和平均来估计。因此：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/2e2692abb518913d9c9b07e5505a0920.png)
+
+可以看到，上式第一项是使用训练集估计的分布 q(x\|θ)q(x\|θ)下的θθ的负对数似然函数。因此我们可以看到，**最小化K-L散度等价于最大化似然函数**。
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/a3d60d76ce8357faa65dc0058db53dd0.png)
+
+互信息用来判断两个分布p(x)和p(y)是否接近独立：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/0d353acb437230f59ee08216c63b0962.png)
+
+使用概率的加和规则和乘积规则，我们可以看到互信息和条件熵之间的关系：
+
+![](https://raw.githubusercontent.com/iqiy/Mat-Lib/master/200521-xulun/ace691b44266a0c4e8685b057ba456c8.png)
+
+因此我们可以把互信息看成由于知道y值而造成的x的不确定性的减小。
+
+

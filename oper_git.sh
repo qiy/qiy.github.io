@@ -36,20 +36,20 @@ git_merge()
 			echo "继续提交"
 			git add --all
 			echo "输入提交信息:"
-			echo "1:修改后端"
-			echo "2:修改前端"
-			echo "3:修改算法"
-			echo "4:修改环境"
+			echo "1:添加文章"
+			echo "2:修改文章"
+			echo "3:修改页面"
+			echo "4:更改背景图"
 			echo "其他：自由编写commit信息"
 			read Buf_commit
             if [ 1 == "$Buf_commit" ];then
-                git commit -m "修改后端"
+                git commit -m "添加文章"
             elif [ 2 == "$Buf_commit" ];then
-                git commit -m "修改前端"
+                git commit -m "修改文章"
             elif [ 3 == "$Buf_commit" ];then
-                git commit -m "修改算法" 
+                git commit -m "修改页面" 
             elif [ 4 == "$Buf_commit" ];then
-                git commit -m "修改环境"  
+                git commit -m "更改背景图"  
             else 
                 git commit -m "$Buf_commit"
             fi

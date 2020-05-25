@@ -38,7 +38,7 @@ git_merge()
 			echo "输入提交信息:"
 			echo "1:添加文章"
 			echo "2:修改文章"
-			echo "3:修改页面"
+			echo "3:修改博客配置"
 			echo "4:更改背景图"
 			echo "其他：自由编写commit信息"
 			read Buf_commit
@@ -47,7 +47,7 @@ git_merge()
             elif [ 2 == "$Buf_commit" ];then
                 git commit -m "修改文章"
             elif [ 3 == "$Buf_commit" ];then
-                git commit -m "修改页面" 
+                git commit -m "修改博客配置" 
             elif [ 4 == "$Buf_commit" ];then
                 git commit -m "更改背景图"  
             else 

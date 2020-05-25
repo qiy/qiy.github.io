@@ -15,6 +15,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 RSS: false
 #weibo_username:     poiny
 #zhihu_username:     zhang-han-pei
+cnblogs_username:   Ph-one
 github_username:    iqiy
 
 

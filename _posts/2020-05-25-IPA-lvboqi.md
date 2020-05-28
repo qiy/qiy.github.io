@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "图像处理基础-滤波器（十二）"
+title:      "图像处理基础-滤波器"
 subtitle:   "图像处理基础"
 date:       2020-05-25 00:20:00
 author:     "QIY"
@@ -8,7 +8,7 @@ header-img: "img/prml.jpg"
 header-mask: 0.3 
 catalog:    true
 tags:
-    - 图像处理
+    - image processing 
 ---
 
 

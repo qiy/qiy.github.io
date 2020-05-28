@@ -3,7 +3,7 @@ layout:     post
 title:      "PRML通俗串烧01"
 subtitle:   "第一章 绪论"
 date:       2018-10-12 00:15:18
-author:     "qiy"
+author:     "QIY"
 header-img: "img/prml.jpg"
 header-mask: 0.3 
 catalog:    true

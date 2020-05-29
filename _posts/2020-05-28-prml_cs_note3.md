@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "PRML通俗串烧03"
-subtitle:   "第三章 线性回归模型
+subtitle:   "第三章 线性回归模型"
 date:       2020-05-28 00:15:18
 author:     "QIY"
 header-img: "img/prml.jpg"

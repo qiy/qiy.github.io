@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "PRML通俗串烧02（二）"
+title:      "PRML通俗串烧02"
 subtitle:   "第二章 概率分布"
-date:       2020-05-28 00:15:18
+date:       2020-05-28 00:18:18
 author:     "QIY"
 header-img: "img/prml.jpg"
 header-mask: 0.3 
@@ -12,11 +12,12 @@ tags:
 ---
 
 
-> PRML 的学习基本上是学十得一。稳扎稳打再来一次
+> 从基础做起
 
 * TOC
 {:toc}
 
+# 概率分布
 ## 2.1 二元分布
 
 ### 2.1.1 伯努利分布

@@ -30,7 +30,7 @@ f(x1,x2,x3,,,,xn)；
 
 梯度的表示符号用记为grad f（X）或▽f（X）=
 
-![](media/c71e026d79b955ecd2a14b78c4591afd.png)
+![](/img/in-post/200608_Gradient/c71e026d79b955ecd2a14b78c4591afd.png)
 
 所谓“**梯度的方向就是函数增大最快的方向**”，梯度的本身就是输入参数向量在函数方向上的偏导向量。
 
@@ -46,19 +46,19 @@ f(x1,x2,x3,,,,xn)；
 
 z=x2+y2图像：
 
-![](media/22d069edf826390aa883d784f56593fd.png)
+![](/img/in-post/200608_Gradient/22d069edf826390aa883d784f56593fd.png)
 
 可知梯度：gradient =[ 2\*x, 2\*y]
 
 在点（2，2）的梯度向量可为[4,4]：
 
-![](media/758a924a6b37eb74fed632ced0ffc52b.png)
+![](/img/in-post/200608_Gradient/758a924a6b37eb74fed632ced0ffc52b.png)
 
 ## 1.2 hession矩阵
 
 对于多元2阶（hession矩阵）:
 
-![](media/e7c4335c636fe2f331babe2b9c6a1692.png)
+![](/img/in-post/200608_Gradient/e7c4335c636fe2f331babe2b9c6a1692.png)
 
 hession矩阵为对称矩阵
 
@@ -66,7 +66,7 @@ hession矩阵为对称矩阵
 
 雅可比矩阵是一阶偏导数以一定方式排列成的矩阵, 其行列式称为雅可比行列式。
 
-![](media/3c912edb1e61e9032211878292ad8338.png)
+![](/img/in-post/200608_Gradient/3c912edb1e61e9032211878292ad8338.png)
 
 此矩阵表示为: JF(x1,…,xn)JF(x1,…,xn) ,
 或者∂(y1,…,ym)∂(x1,…,xn)∂(y1,…,ym)∂(x1,…,xn) .
@@ -79,11 +79,11 @@ hession和Jacobian的行列正好相反。
 
 标量：
 
-![](media/5a5e556a034000616af1054400bdce6c.png)
+![](/img/in-post/200608_Gradient/5a5e556a034000616af1054400bdce6c.png)
 
 矢量：
 
-![](media/ff2cea0dc75d0cfa47e1f11de88a8a1c.png)
+![](/img/in-post/200608_Gradient/ff2cea0dc75d0cfa47e1f11de88a8a1c.png)
 
 机器学习中所说的步长即：δ。
 
@@ -95,12 +95,9 @@ hession和Jacobian的行列正好相反。
 
 # 2 梯度下降与随机梯度下降
 
-![C:\\Users\\User\\AppData\\Local\\Temp\\1591597494(1).png](media/192db38e7b8f84e883f6317abcd6e60a.png)
+![](/img/in-post/200608_Gradient/192db38e7b8f84e883f6317abcd6e60a.png)
 
 >   对于训练速度来说，随机梯度下降法由于每次仅仅采用一个样本来迭代，训练速度很快，而批量梯度下降法在样本量很大的时候，训练速度不能让人满意。对于准确度来说，**随机梯度下降法用于仅仅用一个样本决定梯度方向**，导致解很有可能不是最优。对于收敛速度来说，由于随机梯度下降法一次迭代一个样本，导致迭代方向变化很大，不能很快的收敛到局部最优解。那么，有没有一个中庸的办法能够结合两种方法的优点呢？小**批量梯度下降法是批量梯度下降法和随机梯度下降法的折衷，也就是对于m个样本，我们采用x个样子来迭代**，1\<x\<m。一般可以取x=10，当然根据样本的数据，可以调整这个x的值。对应的更新公式是：
 
-![](media/a18c46cd110347de3579363caa381b45.png)
-
->   https://img2018.cnblogs.com/blog/1413304/201906/1413304-20190601152154197-1569816134.png
-
+![](/img/in-post/200608_Gradient/a18c46cd110347de3579363caa381b45.png)
 >   \--end

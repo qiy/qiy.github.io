@@ -112,7 +112,7 @@ libmv是Blender旗下的一个开源项目。libmv是一个通过运动计算结
 # 3 SLAM
 ## 3.1 SLAM模型简况
 流程：
-![](/img/in-post/200611_SFM-SLAM/3fb23bebe2818d6e67472cdcadf9325b.emf)
+![](/img/in-post/200611_SFM-SLAM/20200611235045.png)
 方法:
 ![](/img/in-post/200611_SFM-SLAM/412f23a54341efc8a9c3ff6aafe4a73d.png)
 视觉SLAM包括几个流程，前端视觉里程计，后端优化，回环检测以及建图。每个part又可以用不同的方法实现。

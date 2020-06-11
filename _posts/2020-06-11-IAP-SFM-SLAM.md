@@ -130,7 +130,6 @@ VO 之后， 又称为后端（Back End）。<br />
 
 ## 3.2 名词
 基础知识点
-<font color=white size=2>
 ```
     1. 特征提取、特征匹配
     （1）Harris
@@ -173,7 +172,6 @@ VO 之后， 又称为后端（Back End）。<br />
     16. 介绍经典的视觉SLAM框架
     （<https://blog.csdn.net/weixin_44580210/article/details/87214464>）
 ```
-</font>
 # 4 SFM与SLAM区别与联系
 
 区别（1）SLAM要求实时，数据是线性有序的，无法一次获得所有图像，部分SLAM算法会丢失过去的部分信息；基于图像的SfM不要求实时，数据是无序的，可以一次输入所有图像，利用所有信息。<br />

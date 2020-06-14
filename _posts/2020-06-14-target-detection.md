@@ -16,6 +16,9 @@ tags:
 * TOC
 
 {:toc}
+
+目标检测常用方法
+
 # 1 R-CNN（Selective Search + CNN + SVM）
 
 ![](/img/in-post/200614-target-detection/132b39621693e0f0004fcd82242d4fa9.png)

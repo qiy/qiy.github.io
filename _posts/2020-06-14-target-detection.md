@@ -11,13 +11,12 @@ tags:
     - Deep Learning
 ---
 
+
 > Deep Learning 的学习需稳扎稳打 积累自己的小厂库
 
 * TOC
-
 {:toc}
 
-目标检测常用方法
 
 # 1 R-CNN（Selective Search + CNN + SVM）
 

@@ -17,9 +17,7 @@ tags:
 * TOC
 {:toc}
 
-
 基本原则：测试集对比训练集；
-
 # 1 临近法
 
 ![](/img/in-post/200608_classifier//8633c91db3e17d58fc19a1b082c39137.png)

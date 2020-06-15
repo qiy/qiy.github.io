@@ -15,7 +15,6 @@ tags:
 > Deep Learning 的学习需稳扎稳打 积累自己的小厂库
 
 * TOC
-
 {:toc}
 
 # 1 导数到梯度

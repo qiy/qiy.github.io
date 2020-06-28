@@ -116,6 +116,7 @@ Faster R-CNN目前是主流，但速度仍不能满足实时要求。
 
 ![](/img/in-post/200614-target-detection/46bdef5345888b2457cec55b254c7c62.png)
 Yolo将目标检测任务转换成回归问题，加快检测速度，因采用7\*7网格进行回归导致精度不高，后面又引入了yolo2/yolo9000等。
+YOLO将物体检测作为一个回归问题进行求解，输入图像经过**一次inference**，便能得到图像中所有物体的**位置和其所属类别及相应的置信概率**。而rcnn/fast rcnn/faster rcnn将检测结果分为两部分求解：物体类别（分类问题），物体位置即bounding box（回归问题）。
 
 # 6 SSD
 

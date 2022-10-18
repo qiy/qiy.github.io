@@ -4,9 +4,9 @@ SEOTitle: 柒月的博客 QIY.NET
 header-img: img/home-bg.jpg
 #email: me@pelhans.com
 #description: "Machine Learning ,| 这里是 @Pelhans 的博客"
-keyword: "iqiy, qiy, 图像处理, 强化学习, 表示学习"
+keyword: "qiy, qiy, 图像处理, 强化学习, 表示学习"
 #url: "https://pelhans.me"              # your host, for absolute URL
-url: "https://iqiy.github.io"              # your host, for absolute URL
+url: "https://qiy.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -16,7 +16,7 @@ RSS: false
 #weibo_username:     poiny
 #zhihu_username:     zhang-han-pei
 cnblogs_username:   Ph-one
-github_username:    iqiy
+github_username:    qiy
 
 
 

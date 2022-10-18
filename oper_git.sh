@@ -37,17 +37,17 @@ git_merge()
 			echo "继续提交"
 			git add --all
 			echo "输入提交信息:"
-			echo "1:修改py"
-			echo "2:修改bat"
-			echo "3:修改环境"
+			echo "1:修改配置"
+			echo "2:添加文章"
+			echo "3:修改文章"
 			echo "其他：自由编写commit信息"
 			read Buf_commit
             if [ 1 == "$Buf_commit" ];then
-                git commit -m "修改py"
+                git commit -m "修改配置"
             elif [ 2 == "$Buf_commit" ];then
-                git commit -m "修改bat"
+                git commit -m "添加文章"
             elif [ 3 == "$Buf_commit" ];then
-                git commit -m "修改环境" 
+                git commit -m "修改文章" 
             else 
                 git commit -m "$Buf_commit"
             fi
